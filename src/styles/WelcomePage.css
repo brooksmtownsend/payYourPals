@@ -1,4 +1,88 @@
+.WelcomePage {
+  width: 100%;
+}
+
 .WelcomePage h1 {
   text-align: center;
   font-size: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 30px);
+}
+
+.WelcomePage .diagonal {
+  width: 1000px;
+  height: 500px;
+  position: absolute;
+  right: -400px;
+  top: -230px;
+  background-color: #AAFFE2;
+  z-index: -1;
+  transform: rotate(36deg);
+}
+
+.WelcomePage .topContent {
+  display: flex;
+  height: 400px;
+}
+
+.WelcomePage .topContent .left, .WelcomePage .topContent .right {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 20px;
+}
+
+.WelcomePage .topContent .left {
+  font-size: 20px;
+}
+
+.WelcomePage .topContent .right button {
+  width: 192px;
+  height: 61px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #FFA483;
+  border: none;
+  cursor: pointer;
+}
+
+.WelcomePage .topContent .right button:focus {
+  background-color: hsl(16, 100%, 70%);
+  outline: none;
+}
+
+.WelcomePage .line {
+  background-color: grey;
+  height: 1px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.WelcomePage .lowerContent {
+  margin: 20px 0;
+}
+
+.WelcomePage .lowerContent .featureRow {
+  display: flex;
+  align-items: center;
+}
+
+.WelcomePage .lowerContent .featureRow > * {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.WelcomePage .lowerContent .featureRow .featureIconContainer, .WelcomePage .lowerContent .featureRow .featureText {
+  display: flex;
+  justify-content: center;
+}
+
+.WelcomePage .lowerContent .featureIcon {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: grey;
 }
