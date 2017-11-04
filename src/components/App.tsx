@@ -1,17 +1,16 @@
 import * as React from 'react'
 import '../styles/App.css'
+import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <h2>Welcome to React</h2>
-        </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      </div>
+      <Router>
+        {/* <Header /> */}
+        {/* <Route path={'/'} component={WelcomePage} /> */}
+        {/* <Route path={'/createEvent'} component={CreateEventPage} /> */}
+        {/* <Footer /> */}
+      </Router>
     );
   }
 }
