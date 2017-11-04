@@ -12,13 +12,8 @@ ReactDOM.render((
     <Router>
       <div>
         <Header />
-<<<<<<< HEAD
-        <Route path={'/'} component={WelcomePage} />
-        <Route path={'/createEvent'} component={CreateEventPage} />
-=======
         <Route exact path={'/'} component={WelcomePage} />
         <Route exact path={'/createEvent'} component={CreateEventPage} />
->>>>>>> feature/implement_welcome_page
         <Footer />
       </div>
     </Router>
