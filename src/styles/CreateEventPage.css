@@ -1,5 +1,5 @@
 
-.CreateEventPage .form-style-5{
+.CreateEventPage .form{
     max-width: 500px;
     padding: 10px 20px;
     background: #f4f7f8;
@@ -9,27 +9,56 @@
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
-.CreateEventPage .form-style-5 fieldset{
+/* following for date time and zone */
+.CreateEventPage #inline{
+    display: flex;
+    flex-direction: row;
+}
+.CreateEventPage #timeZone{
+width: 15%;
+margin-left: 5px;
+}
+
+.CreateEventPage #datetime{
+    width: 40%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.CreateEventPage #labels{
+    padding-top: 10px;
+}
+
+.CreateEventPage #coverPhoto{
+    width: 60%;
+    margin-left: 10px;
+}
+
+.CreateEventPage #num{
+    width: 20%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.CreateEventPage .form fieldset{
     border: none;
 }
-.CreateEventPage .form-style-5 legend {
+.CreateEventPage .form legend {
     font-size: 1.4em;
     margin-bottom: 10px;
 }
-.CreateEventPage .form-style-5 label {
+.CreateEventPage .form label {
     display: block;
     margin-bottom: 8px;
 }
-.CreateEventPage .form-style-5 input[type="text"],
-.CreateEventPage .form-style-5 input[type="date"],
-.CreateEventPage .form-style-5 input[type="datetime"],
-.CreateEventPage .form-style-5 input[type="email"],
-.CreateEventPage .form-style-5 input[type="number"],
-.CreateEventPage .form-style-5 input[type="search"],
-.CreateEventPage .form-style-5 input[type="time"],
-.CreateEventPage .form-style-5 input[type="url"],
-.CreateEventPage .form-style-5 textarea,
-.CreateEventPage .form-style-5 select {
+.CreateEventPage .form input[type="text"],
+.CreateEventPage .form input[type="date"],
+.CreateEventPage .form input[type="datetime-local"],
+.CreateEventPage .form input[type="number"],
+.CreateEventPage .form input[type="search"],
+.CreateEventPage .form input[type="file"],
+.CreateEventPage .form input[type="url"],
+.CreateEventPage .form textarea,
+.CreateEventPage .form select {
     font-family: Georgia, "Times New Roman", Times, serif;
     background: rgba(255,255,255,.1);
     border: none;
@@ -49,23 +78,21 @@
     margin-bottom: 30px;
     
 }
-.CreateEventPage .form-style-5 input[type="text"]:focus,
-.CreateEventPage .form-style-5 input[type="date"]:focus,
-.CreateEventPage .form-style-5 input[type="datetime"]:focus,
-.CreateEventPage .form-style-5 input[type="email"]:focus,
-.CreateEventPage .form-style-5 input[type="number"]:focus,
-.CreateEventPage .form-style-5 input[type="search"]:focus,
-.CreateEventPage .form-style-5 input[type="time"]:focus,
-.CreateEventPage .form-style-5 input[type="url"]:focus,
-.CreateEventPage .form-style-5 textarea:focus,
-.CreateEventPage .form-style-5 select:focus{
+.CreateEventPage .form input[type="text"]:focus,
+.CreateEventPage .form input[type="datetime-local"]:focus,
+.CreateEventPage .form input[type="number"]:focus,
+.CreateEventPage .form input[type="search"]:focus,
+.CreateEventPage .form input[type="file"]:focus,
+.CreateEventPage .form input[type="url"]:focus,
+.CreateEventPage .form textarea:focus,
+.CreateEventPage .form select:focus{
     background: #d2d9dd;
 }
-.CreateEventPage .form-style-5 select{
+.CreateEventPage .form select{
     -webkit-appearance: menulist-button;
     height:35px;
 }
-.CreateEventPage .form-style-5 .number {
+.CreateEventPage .form .number {
     background: #1abc9c;
     color: #fff;
     height: 30px;
@@ -79,8 +106,8 @@
     border-radius: 15px 15px 15px 0px;
 }
 
-.CreateEventPage .form-style-5 input[type="submit"],
-.CreateEventPage .form-style-5 input[type="button"]
+.CreateEventPage .form input[type="submit"],
+.CreateEventPage .form input[type="button"]
 {
     position: relative;
     display: block;
@@ -96,8 +123,8 @@
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
 }
-.CreateEventPage .form-style-5 input[type="submit"]:hover,
-.CreateEventPage .form-style-5 input[type="button"]:hover
+.CreateEventPage .form input[type="submit"]:hover,
+.CreateEventPage .form input[type="button"]:hover
 {
     background: #109177;
 }
