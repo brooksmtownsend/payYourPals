@@ -7,6 +7,7 @@ import './styles/index.css';
 
 ReactDOM.render((
   <Router>
+    <App />
   </Router>
   ), document.getElementById('root') as HTMLElement
 );
