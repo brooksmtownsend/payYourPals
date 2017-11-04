@@ -3,3 +3,13 @@
   margin: 10px;
   position: absolute;
 }
+
+.FacebookLogin{
+  display: inline-block;
+}
+
+.FacebookLogin span button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
