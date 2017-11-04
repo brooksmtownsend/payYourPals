@@ -4,44 +4,46 @@
         "align": [
             true,
             "parameters",
-            "arguments",
+          //   "arguments",
             "statements"
         ],
         "ban": false,
         "class-name": true,
+        "exclude": [
+            "node-modules"
+        ],
         "comment-format": [
             true,
             "check-space"
         ],
-        "curly": true,
+      //   "curly": true,
         "eofline": false,
-        "forin": true,
+      //   "forin": true,
         "indent": [ true, "spaces" ],
         "interface-name": [true, "never-prefix"],
         "jsdoc-format": true,
         "jsx-no-lambda": false,
         "jsx-no-multiline-js": false,
+        "jsx-boolean-value": false,
         "label-position": true,
-        "max-line-length": [ true, 120 ],
+      //   "max-line-length": [ true, 120 ],
         "member-ordering": [
             true,
-            "public-before-private",
-            "static-before-instance",
-            "variables-before-functions"
+            "static-before-instance"
         ],
-        "no-any": true,
+      //   "no-any": true,
         "no-arg": true,
         "no-bitwise": true,
-        "no-console": [
-            true,
-            "log",
-            "error",
-            "debug",
-            "info",
-            "time",
-            "timeEnd",
-            "trace"
-        ],
+      //   "no-console": [
+      //       true,
+      //       "log",
+      //       "error",
+      //       "debug",
+      //       "info",
+      //       "time",
+      //       "timeEnd",
+      //       "trace"
+      //   ],
         "no-consecutive-blank-lines": true,
         "no-construct": true,
         "no-debugger": true,
@@ -53,6 +55,8 @@
         "no-switch-case-fall-through": true,
         "no-trailing-whitespace": false,
         "no-unused-expression": true,
+        "no-unexpected-multiline": true,
+        "jsx-self-close": false,
         "no-use-before-declare": true,
         "one-line": [
             true,
@@ -61,13 +65,12 @@
             "check-open-brace",
             "check-whitespace"
         ],
-        "quotemark": [true, "single", "jsx-double"],
+      //   "quotemark": [true, "single", "jsx-double"],
         "radix": true,
-        "semicolon": [true, "always"],
         "switch-default": true,
-
-        "trailing-comma": [false],
-
+  
+        "trailing-comma": false,
+  
         "triple-equals": [ true, "allow-null-check" ],
         "typedef": [
             true,
@@ -96,4 +99,5 @@
             "check-typecast"
         ]
     }
-}
+  }
+  
