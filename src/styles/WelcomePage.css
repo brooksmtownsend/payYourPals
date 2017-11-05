@@ -29,14 +29,21 @@
 .WelcomePage .topContent .left, .WelcomePage .topContent .right {
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  /* text-align: center; */
+  line-height: 28px;
   margin: 20px;
+}
+
+.WelcomePage .topContent .left > *, .WelcomePage .topContent .right > * {
+  margin: 10px 0;
 }
 
 .WelcomePage .topContent .left {
   font-size: 20px;
+  margin-left: 40px;
 }
 
 .WelcomePage .topContent .right button {
@@ -73,6 +80,12 @@
 .WelcomePage .lowerContent .featureRow > * {
   width: 100%;
   margin: 20px 0;
+}
+
+.WelcomePage .lowerContent .featureText {
+  margin: 0 25px;
+  line-height: 25px;
+  max-width: 400px;
 }
 
 .WelcomePage .lowerContent .featureRow .featureIconContainer, .WelcomePage .lowerContent .featureRow .featureText {
