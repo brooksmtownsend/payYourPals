@@ -12,7 +12,6 @@ export default class CreateEventPage extends React.Component {
               <legend><span className="number">1</span> Event Info</legend>
               <input type="text" name="eventName" placeholder="Event Name *"/>
                 <input type="text" name="location" placeholder="Location *"/>
-                  <input type="text" name="location" placeholder="Location *"/>
                   <textarea name="description" placeholder="Event Description *"></textarea>
                   <div id='inline'> <label id='labels'> Start *:</label>
                   <input type="datetime-local" id='datetime' name="startDatetime"/> 
@@ -66,16 +65,28 @@ export default class CreateEventPage extends React.Component {
           </div>
           );
       }
-
 }
 
 function grabCreateEventInfo(): boolean {
   let form = (document.getElementById('createEventForm') as HTMLFormElement).elements
-  let vals = [];
-  console.log(form.length)
+  let vals = {}
   for (let i = 0; i < form.length; i++) {
     let element = form[i] as HTMLFormElement
-    vals.push(element.name + ": " + element.value)
+    vals[element.name] = element.value
+    console.log(element.name + ":" +  element.value)
   }
+  console.log(vals)
+  fetch('api/createEvent', {
+    method: 'put',
+    body: vals,
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  }).then(res => {
+    res.json().then(r => {
+      console.log(res)
+    })
+  }).catch(err => console.log(err))
+
   return false
 }

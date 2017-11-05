@@ -1,10 +1,19 @@
 import * as React from 'react'
 import '../styles/Header.css'
 import FacebookLogin from 'react-facebook-login'
+import graph from 'fb-react-sdk'
 
 const responseFacebook = (response) => {
   console.log('Facebook response incoming')
   console.log(response);
+
+  graph.setAccessToken(response.accessToken);
+  graph.setVersion('2.10')
+  graph.get(response.id + "/friends", function(err: any, res: any) {
+    console.log(res)
+    console.log(res.data)
+  })
+  // This doesn't work because facebook api 2.0+ doesn't allow people to see the stuff
 }
 
 export default class Header extends React.Component {
@@ -16,7 +25,6 @@ export default class Header extends React.Component {
         <div className="FacebookLogin">
           <FacebookLogin 
             appId='139629923459386'
-            autoLoad={true}
             fields='name, email, picture'
             scope='public_profile, user_friends'
             callback={responseFacebook} 
@@ -30,4 +38,7 @@ export default class Header extends React.Component {
 /**
  * Documentation for the FacebookLogin component:
  * https://www.npmjs.com/package/react-facebook-login
+ * 
+ * Documentation for graph
+ * https://www.npmjs.com/package/fb-react-sdk
  */

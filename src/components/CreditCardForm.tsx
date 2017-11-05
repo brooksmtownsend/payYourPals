@@ -1,16 +1,17 @@
 import * as React from 'react'
 import '../styles/CreditCardForm.css'
 
-export default class CreditCardForm extends React.Component {
+export default class CreditCardForm extends React.Component<{match: any}, {}> {
   render() {
+    let eventId = this.props.match.params.eventId
     return (
       <div className="CreditCardForm">
        <div className="form">
        <form onSubmit={() => {return false}} id='creditCardForm'>
-           <label id='title'> Commit Financially</label>
+           <label id='title'> Enter your information </label>
            <div id='inline'>
-           <input type="text"  name="cardNumber" placeholder="Credit Card Number"/>
-             <input type="text" id='num' name="cvv" placeholder="CVV"/>
+           <input type="text"  name="cardNumber" placeholder="Credit Card Number (no dashes or spaces)" maxLength={16}/>
+             <input type="text" id='num' name="cvv" placeholder="CVV" maxLength={3}/>
              </div>
                <div id='inline'> <label id='labels'> Expiration Date:</label>
                <select id='tz' name="exprMonth">
@@ -42,7 +43,7 @@ export default class CreditCardForm extends React.Component {
               </select>
                </div>
          </form>
-        <button onClick={grabCreditCardInfo}>Create Event</button>
+        <button onClick={grabCreditCardInfo}>Commit</button>
          </div>
          </div>
     )
@@ -51,7 +52,7 @@ export default class CreditCardForm extends React.Component {
 
 function grabCreditCardInfo() {
   let form = (document.getElementById('creditCardForm') as HTMLFormElement).elements
-  let vals = {'': ''}
+  let vals = {}
   for (let i: number = 0; i < form.length; i++) {
     let item = form[i] as HTMLFormElement
     vals[item.name] = item.value

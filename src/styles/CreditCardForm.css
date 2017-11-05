@@ -116,7 +116,7 @@
 }
 
 .CreditCardForm .form input[type="submit"],
-.CreditCardForm .form input[type="button"]
+.CreditCardForm .form button
 {
     position: relative;
     display: block;
