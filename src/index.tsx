@@ -13,7 +13,7 @@ import './styles/index.css'
 ReactDOM.render((
     <Router>
       <div>
-        <Header hideTitle />
+        <Header />
         <Route exact path={'/'} component={WelcomePage} />
         <Route exact path={'/createEvent'} component={CreateEventPage} />
         <Route exact path={'/event/:eventId'} component={EventPage} />
