@@ -9,6 +9,15 @@
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
+.CreditCardForm #title{
+    text-align: center;
+    font-size: 20px;
+}
+.CreditCardForm #max{
+    width: 25%;
+    margin-left: 10px;
+}
+
 /* following for date time and zone */
 .CreditCardForm #inline{
     display: flex;
@@ -16,7 +25,7 @@
 
 }
 .CreditCardForm #tz{
-    width: 15%;
+    width: 30%;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -41,19 +50,10 @@
     width: 50%;
     margin-left: 10px;
 }
-.CreditCardForm #labels{
-    padding-top: 10px;
+.CreditCardForm .labels{
+    padding-top: 7px;
 }
 
-.CreditCardForm #coverPhoto{
-    width: 60%;
-    margin-left: 10px;
-}
-
-
-.CreditCardForm .form fieldset{
-    border: none;
-}
 
 .CreditCardForm .form label {
     display: block;
@@ -116,7 +116,7 @@
 }
 
 .CreditCardForm .form input[type="submit"],
-.CreditCardForm .form input[type="button"]
+.CreditCardForm .form button
 {
     position: relative;
     display: block;

@@ -15,7 +15,7 @@ ReactDOM.render((
         <Header />
         <Route exact path={'/'} component={WelcomePage} />
         <Route exact path={'/createEvent'} component={CreateEventPage} />
-        <Route exact path={'/event/:eventId'} component={EventPage} />
+        <Route exact path={'/event'} component={EventPage} />
         <Footer />
       </div>
     </Router>

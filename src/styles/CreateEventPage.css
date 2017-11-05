@@ -107,7 +107,7 @@ margin-left: 5px;
 }
 
 .CreateEventPage .form input[type="submit"],
-.CreateEventPage .form input[type="button"]
+.CreateEventPage .form button
 {
     position: relative;
     display: block;
