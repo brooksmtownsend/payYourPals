@@ -5,15 +5,19 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import WelcomePage from './components/WelcomePage'
 import CreateEventPage from './components/CreateEventPage'
+import CreditCardForm from './components/CreditCardForm'
+import EventPage from './components/EventPage'
 import registerServiceWorker from './registerServiceWorker'
 import './styles/index.css'
 
 ReactDOM.render((
     <Router>
       <div>
-        <Header />
-        <Route path={'/'} component={WelcomePage} />
-        <Route path={'/createEvent'} component={CreateEventPage} />
+        <Header hideTitle />
+        <Route exact path={'/'} component={WelcomePage} />
+        <Route exact path={'/createEvent'} component={CreateEventPage} />
+        <Route exact path={'/event/:eventId'} component={EventPage} />
+        <Route exact path={'/commit/:eventId'} component={CreditCardForm} />
         <Footer />
       </div>
     </Router>

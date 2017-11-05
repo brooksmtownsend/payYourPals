@@ -1,5 +1,5 @@
 
-.CreateEventPage .form{
+.CreditCardForm .form{
     max-width: 500px;
     padding: 10px 20px;
     background: #f4f7f8;
@@ -10,55 +10,64 @@
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 /* following for date time and zone */
-.CreateEventPage #inline{
+.CreditCardForm #inline{
     display: flex;
     flex-direction: row;
+
 }
-.CreateEventPage #timeZone{
-width: 15%;
-margin-left: 5px;
+.CreditCardForm #tz{
+    width: 21%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.CreditCardForm #tz1{
+    width: 13%;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.CreditCardForm #tz2{
+    width: 21%;
+    margin-left: 5px;
+    margin-right: 5px;
 }
 
-.CreateEventPage #datetime{
+.CreditCardForm #datetime{
     width: 40%;
     margin-left: 5px;
     margin-right: 5px;
 }
-.CreateEventPage #labels{
+
+.CreditCardForm #num{
+    width: 50%;
+    margin-left: 10px;
+}
+.CreditCardForm #labels{
     padding-top: 10px;
 }
 
-.CreateEventPage #coverPhoto{
+.CreditCardForm #coverPhoto{
     width: 60%;
     margin-left: 10px;
 }
 
-.CreateEventPage #num{
-    width: 20%;
-    margin-left: 10px;
-    margin-right: 10px;
-}
 
-.CreateEventPage .form fieldset{
+.CreditCardForm .form fieldset{
     border: none;
 }
-.CreateEventPage .form legend {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-}
-.CreateEventPage .form label {
+
+.CreditCardForm .form label {
     display: block;
     margin-bottom: 8px;
 }
-.CreateEventPage .form input[type="text"],
-.CreateEventPage .form input[type="date"],
-.CreateEventPage .form input[type="datetime-local"],
-.CreateEventPage .form input[type="number"],
-.CreateEventPage .form input[type="search"],
-.CreateEventPage .form input[type="file"],
-.CreateEventPage .form input[type="url"],
-.CreateEventPage .form textarea,
-.CreateEventPage .form select {
+.CreditCardForm .form input[type="text"],
+.CreditCardForm .form input[type="date"],
+.CreditCardForm .form input[type="datetime-local"],
+.CreditCardForm .form input[type="number"],
+.CreditCardForm .form input[type="search"],
+.CreditCardForm .form input[type="file"],
+.CreditCardForm .form input[type="url"],
+.CreditCardForm .form textarea,
+.CreditCardForm .form select {
     font-family: Georgia, "Times New Roman", Times, serif;
     background: rgba(255,255,255,.1);
     border: none;
@@ -78,21 +87,21 @@ margin-left: 5px;
     margin-bottom: 30px;
     
 }
-.CreateEventPage .form input[type="text"]:focus,
-.CreateEventPage .form input[type="datetime-local"]:focus,
-.CreateEventPage .form input[type="number"]:focus,
-.CreateEventPage .form input[type="search"]:focus,
-.CreateEventPage .form input[type="file"]:focus,
-.CreateEventPage .form input[type="url"]:focus,
-.CreateEventPage .form textarea:focus,
-.CreateEventPage .form select:focus{
+.CreditCardForm .form input[type="text"]:focus,
+.CreditCardForm .form input[type="datetime-local"]:focus,
+.CreditCardForm .form input[type="number"]:focus,
+.CreditCardForm .form input[type="search"]:focus,
+.CreditCardForm .form input[type="file"]:focus,
+.CreditCardForm .form input[type="url"]:focus,
+.CreditCardForm .form textarea:focus,
+.CreditCardForm .form select:focus{
     background: #d2d9dd;
 }
-.CreateEventPage .form select{
+.CreditCardForm .form select{
     -webkit-appearance: menulist-button;
     height:35px;
 }
-.CreateEventPage .form .number {
+.CreditCardForm .form .number {
     background: #1abc9c;
     color: #fff;
     height: 30px;
@@ -106,8 +115,9 @@ margin-left: 5px;
     border-radius: 15px 15px 15px 0px;
 }
 
-.CreateEventPage .form input[type="submit"],
-.CreateEventPage .form button {
+.CreditCardForm .form input[type="submit"],
+.CreditCardForm .form button
+{
     position: relative;
     display: block;
     padding: 19px 39px 18px 39px;
@@ -122,8 +132,8 @@ margin-left: 5px;
     border-width: 1px 1px 3px;
     margin-bottom: 10px;
 }
-.CreateEventPage .form input[type="submit"]:hover,
-.CreateEventPage .form input[type="button"]:hover
+.CreditCardForm .form input[type="submit"]:hover,
+.CreditCardForm .form input[type="button"]:hover
 {
     background: #109177;
 }
