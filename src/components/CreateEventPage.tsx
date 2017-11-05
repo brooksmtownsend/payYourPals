@@ -69,11 +69,19 @@ export default class CreateEventPage extends React.Component {
 
 function grabCreateEventInfo(): boolean {
   let form = (document.getElementById('createEventForm') as HTMLFormElement).elements
+<<<<<<< HEAD
   let vals = {};
   console.log(form.length)
   for (let i = 0; i < form.length; i++) {
     let element = form[i] as HTMLFormElement
     vals[element.name] = element.value
+=======
+  let vals = {}
+  for (let i = 0; i < form.length; i++) {
+    let element = form[i] as HTMLFormElement
+    vals[element.name] = element.value
+    console.log(element.name + ":" +  element.value)
+>>>>>>> feature/Misc_improvements
   }
   console.log(vals)
   fetch('api/createEvent', {

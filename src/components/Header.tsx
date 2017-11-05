@@ -21,7 +21,11 @@ export default class Header extends React.Component<{hideTitle?: boolean}, {}> {
   render() {
     return (
       <div className="Header">
+<<<<<<< HEAD
         {this.props.hideTitle || <h1>Pay Your Pals</h1>}
+=======
+        <a href='/'>Pay Your Pals</a>
+>>>>>>> feature/Misc_improvements
         <div className="FacebookLogin">
           <FacebookLogin 
             appId='139629923459386'
