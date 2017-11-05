@@ -1,0 +1,143 @@
+.EventPage .mainDiv h1 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.EventPage .mainDiv h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.EventPage .mainDiv{
+  max-width: 500px;
+  padding: 10px 20px;
+  background: #f4f7f8;
+  margin: 10px auto;
+  padding: 20px;
+  background: #f4f7f8;
+  border-radius: 8px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.EventPage img {
+  border-radius: 8px;
+  border: 0px;
+  max-width: 480px;
+  margin: 10px 10px;
+  box-shadow: 1px 1px 10px #454545;
+}
+/* following for date time and zone */
+.EventPage #inline{
+  display: flex;
+  flex-direction: row;
+}
+.EventPage #timeZone{
+width: 15%;
+margin-left: 5px;
+}
+
+.EventPage #datetime{
+  width: 40%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.EventPage #labels{
+  padding-top: 10px;
+}
+
+.EventPage #coverPhoto{
+  width: 60%;
+  margin-left: 10px;
+}
+
+.EventPage #num{
+  width: 20%;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.EventPage .mainDiv fieldset{
+  border: none;
+}
+.EventPage .mainDiv label {
+  display: block;
+  margin-bottom: 8px;
+}
+.EventPage .mainDiv input[type="text"],
+.EventPage .mainDiv input[type="date"],
+.EventPage .mainDiv input[type="datetime-local"],
+.EventPage .mainDiv input[type="number"],
+.EventPage .mainDiv input[type="search"],
+.EventPage .mainDiv input[type="file"],
+.EventPage .mainDiv input[type="url"],
+.EventPage .mainDiv textarea,
+.EventPage .mainDiv select {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255,255,255,.1);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0;
+  outline: 0;
+  padding: 7px;
+  width: 100%;
+  box-sizing: border-box; 
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box; 
+  background-color: #e8eeef;
+  color:#8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+  margin-bottom: 30px;
+  
+}
+.EventPage .mainDiv input[type="text"]:focus,
+.EventPage .mainDiv input[type="datetime-local"]:focus,
+.EventPage .mainDiv input[type="number"]:focus,
+.EventPage .mainDiv input[type="search"]:focus,
+.EventPage .mainDiv input[type="file"]:focus,
+.EventPage .mainDiv input[type="url"]:focus,
+.EventPage .mainDiv textarea:focus,
+.EventPage .mainDiv select:focus{
+  background: #d2d9dd;
+}
+.EventPage .mainDiv select{
+  -webkit-appearance: menulist-button;
+  height:35px;
+}
+.EventPage .mainDiv .number {
+  background: #1abc9c;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+  border-radius: 15px 15px 15px 0px;
+}
+
+.EventPage .mainDiv input[type="submit"],
+.EventPage .mainDiv input[type="button"]
+{
+  position: relative;
+  display: block;
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  margin: 0 auto;
+  background: #1abc9c;
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  width: 100%;
+  border: 1px solid #16a085;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+}
+.EventPage .mainDiv input[type="submit"]:hover,
+.EventPage .mainDiv input[type="button"]:hover
+{
+  background: #109177;
+}

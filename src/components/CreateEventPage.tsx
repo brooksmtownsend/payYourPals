@@ -7,8 +7,8 @@ export default class CreateEventPage extends React.Component {
     return (
       <div className="CreateEventPage">
         <div className="form">
-          <form>
-            <fieldset>
+          <form id='createEventForm' onSubmit={() => {return false}}>
+            <fieldset id='testFieldSetThing'>
               <legend><span className="number">1</span> Event Info</legend>
               <input type="text" name="eventName" placeholder="Event Name *"/>
                 <input type="text" name="location" placeholder="Location *"/>
@@ -59,11 +59,23 @@ export default class CreateEventPage extends React.Component {
                   <label id='labels'> dollars</label>
                   </div>
                 </fieldset>
-                <input type="submit" value="Create Event" />
                 <label id='labels'> * All fields with an asterix are required</label>
             </form>
+            <button onClick={grabCreateEventInfo}>Actual Button </button>
             </div>
           </div>
           );
       }
+
+}
+
+function grabCreateEventInfo(): boolean {
+  let form = (document.getElementById('createEventForm') as HTMLFormElement).elements
+  let vals = [];
+  console.log(form.length)
+  for (let i = 0; i < form.length; i++) {
+    let element = form[i] as HTMLFormElement
+    vals.push(element.name + ": " + element.value)
+  }
+  return false
 }
