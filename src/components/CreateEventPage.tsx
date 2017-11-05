@@ -78,7 +78,7 @@ function grabCreateEventInfo(): boolean {
   console.log(vals)
   fetch('api/createEvent', {
     method: 'put',
-    body: vals,
+    body: JSON.stringify(vals),
     headers: {
       'Content-Type': 'application/json'
     }
