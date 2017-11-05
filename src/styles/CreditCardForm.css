@@ -135,3 +135,13 @@
 {
     background: #109177;
 }
+
+.CreditCardForm button:active {
+    border-bottom-width: 0px;
+    padding: 20px 39px;
+    transform: translateY(3px);
+}
+
+.CreditCardForm button:focus {
+    outline: none;
+}

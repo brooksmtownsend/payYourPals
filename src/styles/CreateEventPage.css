@@ -139,3 +139,13 @@ margin-left: 5px;
     border-radius: 4px;
     text-decoration: none;
 }
+
+.CreateEventPage button:active, .CreateEventPage a.eventLink:active {
+    border-bottom-width: 0px;
+    padding: 20px 39px;
+    transform: translateY(3px);
+}
+
+.CreateEventPage button:focus, .CreateEventPage a.eventLink:focus {
+    outline: none;
+}
