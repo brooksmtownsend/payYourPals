@@ -3,17 +3,19 @@ import CreditCardForm from './CreditCardForm'
 import '../styles/EventPage.css'
 import '../styles/CreateEventPage.css'
 
-export default class EventPage extends React.Component<{match: any}, {eventDetails: any, isHidden: boolean}> {
+export default class EventPage extends React.Component<{match: any}, {eventDetails: any, attendees: string[], isHidden: boolean}> {
 
   constructor() {
     super()
     this.state = {
       isHidden: true,
+      attendees: [],
       eventDetails: {}
     }
   }
 
   componentDidMount() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     let eventId = this.props.match.params.eventId.slice(1)
     fetch('/api/api.cgi/events/' + eventId, {
       method: 'get',
@@ -25,7 +27,8 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
         console.log(r)
         this.setState({
           isHidden: false,
-          eventDetails: r.event
+          eventDetails: r.event,
+          attendees: r.attendees
         })
       })
     }).catch(err => console.log(err))
@@ -48,10 +51,11 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
             <h3>{'Start Date / Time : ' + this.state.eventDetails[4]}</h3>
             <h3>{'End Date / Time: ' + this.state.eventDetails[5]}</h3>
             <h3>{'Hosted by: ' + this.state.eventDetails[7]}</h3>
+            <h3>Committed Attendees: {this.state.attendees.join(', ')}</h3>
             <br />
           </div>
         </div>
-        <CreditCardForm eventId={this.state.eventDetails[1]}/>
+        <CreditCardForm eventId={this.state.eventDetails[0]}/>
       </div>
       );
   }

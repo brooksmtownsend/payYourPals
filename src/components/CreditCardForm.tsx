@@ -1,7 +1,8 @@
 import * as React from 'react'
 import '../styles/CreditCardForm.css'
 
-export default class CreditCardForm extends React.Component<{eventId: number}, {}> {
+export default class CreditCardForm extends React.Component<{eventId: number}, {eventId: number, linkCreated: boolean}> {
+
   render() {
     let eventId = this.props.eventId
     return (
@@ -48,22 +49,31 @@ export default class CreditCardForm extends React.Component<{eventId: number}, {
               </select>
                </div>
          </form>
-        <button onClick={grabCreditCardInfo}>Commit</button>
+        <button onClick={() => this.commit(eventId)}>Commit</button>
          </div>
          </div>
     )
   }
-}
 
-function grabCreditCardInfo() {
-  let form = (document.getElementById('creditCardForm') as HTMLFormElement).elements
-  let vals = {}
-  for (let i: number = 0; i < form.length; i++) {
-    let item = form[i] as HTMLFormElement
-    vals[item.name] = item.value
+  commit(eid: number) {
+    let form = (document.getElementById('creditCardForm') as HTMLFormElement).elements
+    let vals: any = {}
+    for (let i: number = 0; i < form.length; i++) {
+      let item = form[i] as HTMLFormElement
+      vals[item.name] = item.value
+    }
+    console.log(vals)
+    // send out vals to server
+    fetch('/api/api.cgi/commit', {
+      method: 'put',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        name: vals.name,
+        email: vals.email,
+        eid: eid
+      })
+    }).then(res => res.json().then(r => console.log(r)))
   }
-  console.log(vals)
-  // send out vals to server
-
-  return false
 }
