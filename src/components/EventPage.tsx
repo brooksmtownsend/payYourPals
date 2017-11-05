@@ -1,5 +1,6 @@
 import * as React from 'react'
 import CreditCardForm from './CreditCardForm'
+import Header from './Header'
 import '../styles/EventPage.css'
 import '../styles/CreateEventPage.css'
 
@@ -50,6 +51,7 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
     let imgUrl = this.state.eventDetails[8] !== 'coverPhoto' ? this.state.eventDetails[8] : 'http://www.southernnmlaw.com/wp-content/uploads/2015/07/549527_400551523333307_1869688604_n.jpg'
     return (
       <div>
+        <Header />
         <div className="EventPage">
           <div className="mainDiv">
             <img src={imgUrl} alt='event picture' />

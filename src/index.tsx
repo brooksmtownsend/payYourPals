@@ -13,7 +13,6 @@ import './styles/index.css'
 ReactDOM.render((
     <Router>
       <div>
-        <Header />
         <Route exact path={'/'} component={WelcomePage} />
         <Route exact path={'/createEvent'} component={CreateEventPage} />
         <Route exact path={'/event/:eventId'} component={EventPage} />
@@ -22,4 +21,4 @@ ReactDOM.render((
     </Router>
   ), document.getElementById('root') as HTMLElement
 );
-registerServiceWorker();
+// registerServiceWorker();

@@ -3,6 +3,8 @@ import '../styles/Header.css'
 import FacebookLogin from 'react-facebook-login'
 import graph from 'fb-react-sdk'
 
+const logo = require('../images/PYP_trans.png')
+
 const responseFacebook = (response) => {
   console.log('Facebook response incoming')
   console.log(response);
@@ -21,7 +23,10 @@ export default class Header extends React.Component<{hideTitle?: boolean}, {}> {
   render() {
     return (
       <div className="Header">
-        {this.props.hideTitle || <a href='/'>Pay Your Pals</a>}
+        <a href='/'>
+          <img width="50" src={logo}/>
+          <h1>Pay Your Pals</h1>
+        </a>
         <div className="FacebookLogin">
           <FacebookLogin 
             appId='139629923459386'
