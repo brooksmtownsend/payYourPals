@@ -43,7 +43,11 @@ export default class CreditCardForm extends React.Component<{match: any}, {}> {
               </select>
                </div>
          </form>
+<<<<<<< HEAD
         <button onClick={grabCreditCardInfo}>Commit</button>
+=======
+        <button onClick={grabCreditCardInfo}>Create Event</button>
+>>>>>>> Fixed some credit card styling, getting elements from credit card form
          </div>
          </div>
     )
@@ -52,7 +56,11 @@ export default class CreditCardForm extends React.Component<{match: any}, {}> {
 
 function grabCreditCardInfo() {
   let form = (document.getElementById('creditCardForm') as HTMLFormElement).elements
+<<<<<<< HEAD
   let vals = {}
+=======
+  let vals = {'': ''}
+>>>>>>> Fixed some credit card styling, getting elements from credit card form
   for (let i: number = 0; i < form.length; i++) {
     let item = form[i] as HTMLFormElement
     vals[item.name] = item.value
