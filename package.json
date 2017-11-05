@@ -20,7 +20,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "localhost:8082",
+      "target": "payYourPals.net",
       "secure": true,
       "changeOrigin": true
     }
