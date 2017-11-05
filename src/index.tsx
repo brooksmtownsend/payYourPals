@@ -17,7 +17,6 @@ ReactDOM.render((
         <Route exact path={'/'} component={WelcomePage} />
         <Route exact path={'/createEvent'} component={CreateEventPage} />
         <Route exact path={'/event/:eventId'} component={EventPage} />
-        <Route exact path={'/commit/:eventId'} component={CreditCardForm} />
         <Footer />
       </div>
     </Router>

@@ -20,7 +20,7 @@
   },
   "proxy": {
     "/api": {
-      "target": "payYourPals.net",
+      "target": "http://payYourPals.net",
       "secure": true,
       "changeOrigin": true
     }
