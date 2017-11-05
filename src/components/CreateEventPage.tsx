@@ -1,8 +1,20 @@
 import * as React from 'react'
 import '../styles/CreateEventPage.css'
 import CreditCardForm from './CreditCardForm'
+import { Link } from 'react-router-dom'
 
-export default class CreateEventPage extends React.Component {
+export default class CreateEventPage extends React.Component<{}, {eventId: number, linkCreated: boolean}> {
+
+  constructor() {
+    super()
+    this.state = {
+      eventId: 9999,
+      linkCreated: false
+    }
+
+    this.grabCreateEventInfo = this.grabCreateEventInfo.bind(this)
+  }
+
   render() {
     return (
       <div className="CreateEventPage">
@@ -60,39 +72,43 @@ export default class CreateEventPage extends React.Component {
                 </fieldset>
                 <label id='labels'> * All fields with an asterix are required</label>
             </form>
-            <button onClick={grabCreateEventInfo}>Create Event</button>
+            <button onClick={this.grabCreateEventInfo}>Create Event</button>
+            {this.state.linkCreated && <Link to={'/event/:' + this.state.eventId}> Click here to view your event! </Link>}
             </div>
           </div>
           );
       }
-}
-
-function grabCreateEventInfo(): boolean {
-  let form = (document.getElementById('createEventForm') as HTMLFormElement).elements
-  let vals: any = {};
-  console.log(form.length)
-  for (let i = 0; i < form.length; i++) {
-    let element = form[i] as HTMLFormElement
-    vals[element.name] = element.value
-  }
-
-  vals.coverPhotoUrl = 'coverPhoto'
-  vals.minAttendees = vals.minAttendees as number || 0
-  vals.maxAttendees = vals.maxAttendees as number || 0
-  vals.amountPerPerson = vals.amountPerPerson as number || 0
-  vals.fundingGoal = vals.fundingGoal as number || 0
-
-  console.log(vals)
-  fetch('/api/api.cgi/createEvent', {
-    method: 'put',
-    body: JSON.stringify(vals),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }).then(res => {
-    res.json().then(r => {
-      console.log(r)
-    })
-  }).catch(err => console.log(err))
-  return false
+      grabCreateEventInfo(): boolean {
+        let form = (document.getElementById('createEventForm') as HTMLFormElement).elements
+        let vals: any = {};
+        console.log(form.length)
+        for (let i = 0; i < form.length; i++) {
+          let element = form[i] as HTMLFormElement
+          vals[element.name] = element.value
+        }
+      
+        vals.coverPhotoUrl = 'coverPhoto'
+        vals.minAttendees = vals.minAttendees as number || 0
+        vals.maxAttendees = vals.maxAttendees as number || 0
+        vals.amountPerPerson = vals.amountPerPerson as number || 0
+        vals.fundingGoal = vals.fundingGoal as number || 0
+      
+        console.log(vals)
+        fetch('/api/api.cgi/createEvent', {
+          method: 'put',
+          body: JSON.stringify(vals),
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        }).then(res => {
+          res.json().then(r => {
+              this.setState({
+                linkCreated: true,
+                eventId: r.eventId[0]
+              })
+          })
+        }).catch(err => console.log(err))
+      
+        return false
+      }
 }

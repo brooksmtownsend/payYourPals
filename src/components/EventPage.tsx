@@ -35,6 +35,7 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
   }
 
   componentDidMount() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
     this.fillData()
   }
 
