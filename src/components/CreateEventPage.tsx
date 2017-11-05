@@ -75,8 +75,8 @@ function grabCreateEventInfo(): boolean {
     let element = form[i] as HTMLFormElement
     vals[element.name] = element.value
   }
-  console.log(vals)
-  fetch('api/createEvent', {
+  // console.log(vals)
+  fetch('/api/api.cgi/createEvent', {
     method: 'put',
     body: JSON.stringify(vals),
     headers: {
@@ -87,6 +87,5 @@ function grabCreateEventInfo(): boolean {
       console.log(res)
     })
   }).catch(err => console.log(err))
-
   return false
 }
