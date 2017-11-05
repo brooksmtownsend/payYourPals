@@ -1,7 +1,9 @@
-.Header h1 {
+.Header a {
   font-size: 24px;
   margin: 10px;
   position: absolute;
+  color: black;
+  text-decoration: none;
 }
 
 .FacebookLogin {

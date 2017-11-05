@@ -61,7 +61,7 @@ export default class CreateEventPage extends React.Component {
                 </fieldset>
                 <label id='labels'> * All fields with an asterix are required</label>
             </form>
-            <button onClick={grabCreateEventInfo}>Actual Button </button>
+            <button onClick={grabCreateEventInfo}>Create Event</button>
             </div>
           </div>
           );
