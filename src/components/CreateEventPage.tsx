@@ -15,7 +15,7 @@ export default class CreateEventPage extends React.Component {
                   <textarea name="description" placeholder="Event Description *"></textarea>
                   <div id='inline'> <label id='labels'> Start *:</label>
                   <input type="datetime-local" id='datetime' name="startDatetime"/> 
-                  <select id="timeZone" name="timeZones">
+                  <select id="timeZone" name="timeZone">
                       <option value="PST">PST</option>
                       <option value="EST">EST</option>
                       <option value="CST">CST</option>
@@ -23,7 +23,7 @@ export default class CreateEventPage extends React.Component {
                       </select>  
                   </div>
                   <div id='inline'> <label id='labels'> End *:</label>
-                  <input type="datetime-local" id='datetime' name="startDatetime"/> 
+                  <input type="datetime-local" id='datetime' name="endDatetime"/> 
                   <select id="timeZone" name="timeZones">
                       <option value="PST">PST</option>
                       <option value="EST">EST</option>
@@ -31,16 +31,16 @@ export default class CreateEventPage extends React.Component {
                       <option value="MST">MST</option>
                       </select>  
                   </div>
-                  <input type="text" name="addCohost" placeholder="Add cohosts (separated by commas)"/> 
+                  <input type="text" name="cohosts" placeholder="Add cohosts (separated by commas)"/> 
                   <div id='inline'><label id='labels'> Upload Cover Photo: </label> <input type="file" id='coverPhoto' name="coverPhoto" accept="image/*" /> </div>
             </fieldset>
                 <fieldset>
                   <legend><span className="number">2</span> Choose Goals </legend>
-                  <textarea name="field3" placeholder="Describe your payment goals to your guests"></textarea>
+                  <textarea name="justification" placeholder="Describe your payment goals to your guests"></textarea>
                   <input type="number"  name="minAttendees" placeholder="Set minimum number of attendees"/>
                   <input type="number" name="maxAttendees" placeholder="Set maximum number of attendees"/>
                   <div id='inline'> <label id='labels'> Set Transaction Time:</label>
-                  <input type="datetime-local" id='datetime' name="startDatetime"/> 
+                  <input type="datetime-local" id='datetime' name="transactionTime"/> 
                   <select id="timeZone" name="timeZones">
                       <option value="PST">PST</option>
                       <option value="EST">EST</option>
@@ -50,11 +50,11 @@ export default class CreateEventPage extends React.Component {
                   </div>
                   <label id='labels'> Choose option 1 or 2 *</label>
                   <div id='inline'> <label id='labels'> 1) Require set payment amount per person:</label>
-                  <input type="number" id='num' name="perPersonAmt" placeholder="ex: 5"/>
+                  <input type="number" id='num' name="amountPerPerson" placeholder="ex: 5"/>
                   <label id='labels'> dollars</label>
                   </div>
                   <div id='inline'> <label id='labels'> 2) Set overall funding goal:</label>
-                  <input type="number" id='num' name="overallFunding" placeholder="ex: 200"/>
+                  <input type="number" id='num' name="fundingGoal" placeholder="ex: 200"/>
                   <label id='labels'> dollars</label>
                   </div>
                 </fieldset>
