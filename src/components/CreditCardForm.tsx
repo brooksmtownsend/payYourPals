@@ -1,7 +1,8 @@
 import * as React from 'react'
 import '../styles/CreditCardForm.css'
 
-export default class CreditCardForm extends React.Component<{eventId: number}, {}> {
+export default class CreditCardForm extends React.Component<{eventId: number}, {eventId: number, linkCreated: boolean}> {
+
   render() {
     let eventId = this.props.eventId
     return (
