@@ -47,11 +47,12 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
     let minCost = Math.round(this.state.eventDetails[14] / this.state.eventDetails[10])
     let maxCost = Math.round(this.state.eventDetails[14] / this.state.eventDetails[11])
 
+    let imgUrl = this.state.eventDetails[8] !== 'coverPhoto' ? this.state.eventDetails[8] : 'http://www.southernnmlaw.com/wp-content/uploads/2015/07/549527_400551523333307_1869688604_n.jpg'
     return (
       <div>
         <div className="EventPage">
           <div className="mainDiv">
-            <img src='http://www.southernnmlaw.com/wp-content/uploads/2015/07/549527_400551523333307_1869688604_n.jpg' alt='event picture' />
+            <img src={imgUrl} alt='event picture' />
             <h1>{this.state.eventDetails[1]}</h1>
             <h2>{this.state.eventDetails[3]}</h2>
             <h3>{'Cost at ' + this.state.eventDetails[10] + ' attendees: $' + minCost}</h3>

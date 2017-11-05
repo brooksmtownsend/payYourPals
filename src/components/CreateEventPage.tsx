@@ -44,7 +44,7 @@ export default class CreateEventPage extends React.Component<{}, {eventId: numbe
                       </select>  
                   </div>
                   <input type="text" name="cohosts" placeholder="Add cohosts (separated by commas)"/> 
-                  <div id='inline'><label id='labels'> Upload Cover Photo: </label> <input type="file" id='coverPhoto' name="coverPhoto" accept="image/*" /> </div>
+                  <div id='inline'><label id='labels'> Upload Cover Photo: </label> <input type="url" id='coverPhoto' name="coverPhotoUrl" accept="image/*" placeholder="Image Url"/> </div>
             </fieldset>
                 <fieldset>
                   <legend><span className="number">2</span> Choose Goals </legend>
@@ -87,7 +87,6 @@ export default class CreateEventPage extends React.Component<{}, {eventId: numbe
           vals[element.name] = element.value
         }
       
-        vals.coverPhotoUrl = 'coverPhoto'
         vals.minAttendees = vals.minAttendees as number || 0
         vals.maxAttendees = vals.maxAttendees as number || 0
         vals.amountPerPerson = vals.amountPerPerson as number || 0
