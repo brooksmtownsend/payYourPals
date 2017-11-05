@@ -16,17 +16,17 @@
 
 }
 .CreditCardForm #tz{
-    width: 15%;
+    width: 21%;
     margin-left: 5px;
     margin-right: 5px;
 }
 .CreditCardForm #tz1{
-    width: 15%;
+    width: 13%;
     margin-left: 5px;
     margin-right: 5px;
 }
 .CreditCardForm #tz2{
-    width: 15%;
+    width: 21%;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -116,7 +116,7 @@
 }
 
 .CreditCardForm .form input[type="submit"],
-.CreditCardForm .form input[type="button"]
+.CreditCardForm .form button
 {
     position: relative;
     display: block;
