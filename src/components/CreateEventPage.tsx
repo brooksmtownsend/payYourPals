@@ -1,6 +1,7 @@
 import * as React from 'react'
 import '../styles/CreateEventPage.css'
 import CreditCardForm from './CreditCardForm'
+import Header from './Header'
 import { Link } from 'react-router-dom'
 
 export default class CreateEventPage extends React.Component<{}, {eventId: number, linkCreated: boolean}> {
@@ -18,6 +19,7 @@ export default class CreateEventPage extends React.Component<{}, {eventId: numbe
   render() {
     return (
       <div className="CreateEventPage">
+        <Header />
         <div className="form">
           <form id='createEventForm' onSubmit={() => {return false}}>
             <fieldset id='testFieldSetThing'>

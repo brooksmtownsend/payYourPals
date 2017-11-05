@@ -7,7 +7,15 @@
   font-size: 30px;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 30px);
+  top: 30px;
+  transform: translate(-50%, 0px);
+}
+
+.WelcomePage img {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%, 40px);
 }
 
 .WelcomePage .diagonal {
@@ -23,7 +31,8 @@
 
 .WelcomePage .topContent {
   display: flex;
-  height: 400px;
+  height: 240px;
+  margin-top: 120px;
 }
 
 .WelcomePage .topContent .left, .WelcomePage .topContent .right {
@@ -43,6 +52,7 @@
 .WelcomePage .topContent .left {
   font-size: 20px;
   margin-left: 40px;
+  align-items: left;
 }
 
 .WelcomePage .topContent .right button {
@@ -92,10 +102,10 @@
 }
 
 .WelcomePage .lowerContent .featureIconContainer img {
-  height: fit-content;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .WelcomePage .lowerContent .featureText {

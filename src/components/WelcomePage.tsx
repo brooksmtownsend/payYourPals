@@ -1,6 +1,7 @@
 import * as React from 'react'
 import '../styles/WelcomePage.css'
 
+const logo = require('../images/PYP_trans.png')
 const feature1Img = require('../images/feature1.png')
 const feature2Img = require('../images/feature2.png')
 const feature3Img = require('../images/feature3.png')
@@ -12,6 +13,7 @@ export default class WelcomePage extends React.Component {
       <div className="WelcomePage">
         <div className="diagonal"></div>
         <h1>Pay Your Pals</h1>
+        <img width="90" src={logo}/>
         <div className="topContent">
           <div className="left">
             <h2>Get people to pay for your events without the hassle</h2>
