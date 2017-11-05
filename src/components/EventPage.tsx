@@ -51,7 +51,7 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
             <br />
           </div>
         </div>
-        <CreditCardForm eventId={this.state.eventDetails[1]}/>
+        <CreditCardForm eventId={this.state.eventDetails[0]}/>
       </div>
       );
   }
