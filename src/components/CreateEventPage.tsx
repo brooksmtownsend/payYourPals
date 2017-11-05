@@ -75,7 +75,7 @@ export default class CreateEventPage extends React.Component<{}, {eventId: numbe
                 <label id='labels'> * All fields with an asterix are required</label>
             </form>
             <button onClick={this.grabCreateEventInfo}>Create Event</button>
-            {this.state.linkCreated && <Link to={'/event/:' + this.state.eventId}> Click here to view your event! </Link>}
+            {this.state.linkCreated && <Link className="eventLink" to={'/event/:' + this.state.eventId}> Click here to view your event! </Link>}
             </div>
           </div>
           );
