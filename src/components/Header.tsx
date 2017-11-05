@@ -3,6 +3,7 @@ import '../styles/Header.css'
 import FacebookLogin from 'react-facebook-login'
 
 const responseFacebook = (response) => {
+  console.log('Facebook response incoming')
   console.log(response);
 }
 
