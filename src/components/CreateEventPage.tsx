@@ -1,5 +1,6 @@
 import * as React from 'react'
 import '../styles/CreateEventPage.css'
+import CreditCardForm from './CreditCardForm'
 
 export default class CreateEventPage extends React.Component {
   render() {
