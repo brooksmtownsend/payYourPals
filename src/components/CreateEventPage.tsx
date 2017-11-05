@@ -69,13 +69,20 @@ export default class CreateEventPage extends React.Component {
 
 function grabCreateEventInfo(): boolean {
   let form = (document.getElementById('createEventForm') as HTMLFormElement).elements
-  let vals = {};
+  let vals: any = {};
   console.log(form.length)
   for (let i = 0; i < form.length; i++) {
     let element = form[i] as HTMLFormElement
     vals[element.name] = element.value
   }
-  // console.log(vals)
+
+  vals.coverPhotoUrl = 'coverPhoto'
+  vals.minAttendees = vals.minAttendees as number || 0
+  vals.maxAttendees = vals.maxAttendees as number || 0
+  vals.amountPerPerson = vals.amountPerPerson as number || 0
+  vals.fundingGoal = vals.fundingGoal as number || 0
+
+  console.log(vals)
   fetch('/api/api.cgi/createEvent', {
     method: 'put',
     body: JSON.stringify(vals),
@@ -84,7 +91,7 @@ function grabCreateEventInfo(): boolean {
     }
   }).then(res => {
     res.json().then(r => {
-      console.log(res)
+      console.log(r)
     })
   }).catch(err => console.log(err))
   return false

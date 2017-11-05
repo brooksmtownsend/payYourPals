@@ -1,9 +1,9 @@
 import * as React from 'react'
 import '../styles/CreditCardForm.css'
 
-export default class CreditCardForm extends React.Component<{match: any}, {}> {
+export default class CreditCardForm extends React.Component<{eventId: number}, {}> {
   render() {
-    let eventId = this.props.match.params.eventId
+    let eventId = this.props.eventId
     return (
       <div className="CreditCardForm">
        <div className="form">
@@ -44,7 +44,6 @@ export default class CreditCardForm extends React.Component<{match: any}, {}> {
                </div>
          </form>
         <button onClick={grabCreditCardInfo}>Commit</button>
-        <button onClick={grabCreditCardInfo}>Create Event</button>
          </div>
          </div>
     )
