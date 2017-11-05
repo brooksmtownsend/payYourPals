@@ -8,11 +8,16 @@ export default class CreditCardForm extends React.Component<{eventId: number}, {
       <div className="CreditCardForm">
        <div className="form">
        <form onSubmit={() => {return false}} id='creditCardForm'>
-           <label id='title'> Enter your information </label>
+           <label id='title'> Commit Financially </label>
+           <input type='text' id='Name' name='name' placeholder='First and Last Name'/>
+           <input type='text' id='Email' name='email' placeholder='Email Address' />
            <div id='inline'>
+             <label className='labels'> Maximum Amount You are Willing to Pay to Attend: </label>
+           <input type="number" id='max' name="maxAmount" placeholder='ex: 5'/>
+           </div>
+           <input type="text"  name="cardOwner" placeholder="Name on Card"/>
            <input type="text"  name="cardNumber" placeholder="Credit Card Number (no dashes or spaces)" maxLength={16}/>
              <input type="text" id='num' name="cvv" placeholder="CVV" maxLength={3}/>
-             </div>
                <div id='inline'> <label id='labels'> Expiration Date:</label>
                <select id='tz' name="exprMonth">
                <option value="01">January</option>

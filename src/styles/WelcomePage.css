@@ -32,7 +32,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* text-align: center; */
   line-height: 28px;
   margin: 20px;
 }
@@ -75,11 +74,28 @@
 .WelcomePage .lowerContent .featureRow {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .WelcomePage .lowerContent .featureRow > * {
   width: 100%;
-  margin: 20px 0;
+  margin: 20px;
+}
+
+.WelcomePage .lowerContent .featureIconContainer {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 100px;
+  min-width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.WelcomePage .lowerContent .featureIconContainer img {
+  height: fit-content;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .WelcomePage .lowerContent .featureText {

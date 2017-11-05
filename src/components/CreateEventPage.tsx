@@ -94,6 +94,5 @@ function grabCreateEventInfo(): boolean {
       console.log(r)
     })
   }).catch(err => console.log(err))
-
   return false
 }
