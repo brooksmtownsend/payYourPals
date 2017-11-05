@@ -12,10 +12,10 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
       attendees: [],
       eventDetails: {}
     }
+    this.commit = this.commit.bind(this)
   }
 
-  componentDidMount() {
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  fillData() {
     let eventId = this.props.match.params.eventId.slice(1)
     fetch('/api/api.cgi/events/' + eventId, {
       method: 'get',
@@ -32,6 +32,15 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
         })
       })
     }).catch(err => console.log(err))
+  }
+
+  componentDidMount() {
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+    this.fillData()
+  }
+
+  commit() {
+    this.fillData()
   }
 
   render() {
@@ -55,7 +64,7 @@ export default class EventPage extends React.Component<{match: any}, {eventDetai
             <br />
           </div>
         </div>
-        <CreditCardForm eventId={this.state.eventDetails[0]}/>
+        <CreditCardForm commitFn={this.commit} eventId={this.state.eventDetails[0]}/>
       </div>
       );
   }
